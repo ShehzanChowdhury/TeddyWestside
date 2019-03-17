@@ -17,9 +17,9 @@ var commentRoutes        = require("./routes/comments"),
 
 //seedDB(); 
 
-//mongoose.connect("mongodb://localhost/teddy_camp", { useNewUrlParser: true });
-mongoose.connect("mongodb+srv://shehzan:shehzan@teddy12-7kpaz.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
-//
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+//mongoose.connect("mongodb+srv://shehzan:shehzan@teddy12-7kpaz.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname +"/public"));

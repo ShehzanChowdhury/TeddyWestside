@@ -18,7 +18,7 @@ var commentRoutes        = require("./routes/comments"),
 //seedDB(); 
 
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
-//mongoose.connect("mongodb+srv://shehzan:shehzan@teddy12-7kpaz.mongodb.net/test?retryWrites=true", { useNewUrlParser: true });
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
